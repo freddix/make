@@ -1,14 +1,19 @@
 Summary:	GNU Make
 Name:		make
 Version:	3.82
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Development/Building
 Source0:	ftp://ftp.gnu.org/gnu/make/%{name}-%{version}.tar.bz2
 # Source0-md5:	1a11100f3c63fcf5753818e59d63088f
 Patch0:		%{name}-arg-list-length.patch
-Patch1:		%{name}-parallel-build.patch
+Patch1:		%{name}-bug30612.patch
+Patch2:		%{name}-bug30723.patch
+Patch3:		%{name}-dont-prune-intermediate.patch
+Patch4:		%{name}-expensive_glob.patch
+Patch5:		%{name}-makeflags.patch
+Patch6:		%{name}-sort-blank.patch
 URL:		http://www.gnu.org/software/make/
 BuildRequires:	automake
 BuildRequires:	texinfo
@@ -26,6 +31,11 @@ makefile.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p0
+%patch4 -p0
+%patch5 -p0
+%patch6 -p1
 
 %build
 %configure
