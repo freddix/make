@@ -1,12 +1,13 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/make.git
 Summary:	GNU Make
 Name:		make
-Version:	4.0
+Version:	4.1
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Building
 Source0:	ftp://ftp.gnu.org/gnu/make/%{name}-%{version}.tar.bz2
-# Source0-md5:	571d470a7647b455e3af3f92d79f1c18
+# Source0-md5:	57a7a224a822f94789a587ccbcedff69
 URL:		http://www.gnu.org/software/make/
 BuildRequires:	automake
 BuildRequires:	texinfo
